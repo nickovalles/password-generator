@@ -155,107 +155,107 @@ else {
 
 // Using Switch - carrying out action cases
 switch(typeEntrySelection) {
-  case A: //uppercase
+  case 1: //uppercase
   alert("You have selected " + typeA);
   var textTypeChoices = [A]
   password = createPassword(passwordLength, typeEntrySelection);
   //break
   break;
 
-  case B: //uppercase
+  case 2: //uppercase
   alert("You have selected " + typeB);
   var textTypeChoices = [B]
   password = createPassword(passwordLength, typeEntrySelection);
   //break
   break;
 
-  case C: //uppercase
+  case 3: //uppercase
   alert("You have selected " + typeC);
   var textTypeChoices = [C]
   password = createPassword(passwordLength, typeEntrySelection);
   //break
   break;
 
-  case D: //uppercase
+  case 4: //uppercase
     alert("You have selected " + typeD);
     var textTypeChoices = [D]
     password = createPassword(passwordLength, typeEntrySelection);
   //break
     break;
 
-    case E: //uppercase
+    case 5: //uppercase
     alert("You have selected " + typeE);
-    var textTypeChoices = [E]
+    var textTypeChoices = [A, B]
     password = createPassword(passwordLength, typeEntrySelection);
   //break
     break;
 
-    case F: //uppercase
+    case 6: //uppercase
     alert("You have selected " + typeF);
-    var textTypeChoices = [F]
+    var textTypeChoices = [A, C]
     password = createPassword(passwordLength, typeEntrySelection);
   //break
     break;
 
-    case G: //uppercase
+    case 7: //uppercase
     alert("You have selected " + typeG);
-    var textTypeChoices = [G]
+    var textTypeChoices = [A, D]
     password = createPassword(passwordLength, typeEntrySelection);
   //break
     break;
 
-    case H: //uppercase
+    case 8: //uppercase
     alert("You have selected " + typeH);
-    var textTypeChoices = [H]
+    var textTypeChoices = [B, C]
     password = createPassword(passwordLength, typeEntrySelection);
   //break
     break;
 
-    case I: //uppercase
+    case 9: //uppercase
     alert("You have selected " + typeI);
-    var textTypeChoices = [I]
+    var textTypeChoices = [B, D]
     password = createPassword(passwordLength, typeEntrySelection);
   //break
     break;
 
-    case J: //uppercase
+    case 10: //uppercase
     alert("You have selected " + typeJ);
-    var textTypeChoices = [J]
+    var textTypeChoices = [C, D]
     password = createPassword(passwordLength, typeEntrySelection);
   //break
     break;
 
-    case K: //uppercase
+    case 11: //uppercase
     alert("You have selected " + typeK);
-    var textTypeChoices = [K]
+    var textTypeChoices = [A, B, C]
     password = createPassword(passwordLength, typeEntrySelection);
   //break
     break;
 
-    case L: //uppercase
+    case 12: //uppercase
     alert("You have selected " + typeL);
-    var textTypeChoices = [L]
+    var textTypeChoices = [A, B, D]
     password = createPassword(passwordLength, typeEntrySelection);
   //break
     break;
 
-    case M: //uppercase
+    case 13: //uppercase
     alert("You have selected " + typeM);
-    var textTypeChoices = [M]
+    var textTypeChoices = [A, C, D]
     password = createPassword(passwordLength, typeEntrySelection);
   //break
     break;
 
-    case N: //uppercase
+    case 14: //uppercase
     alert("You have selected " + typeN);
-    var textTypeChoices = [N]
+    var textTypeChoices = [B, C, D]
     password = createPassword(passwordLength, typeEntrySelection);
   //break
     break;
 
-    case O: //uppercase
+    case 15: //uppercase
     alert("You have selected " + typeO);
-    var textTypeChoices = [O]
+    var textTypeChoices = [A, B, C, D]
     password = createPassword(passwordLength, typeEntrySelection);
   //break
     break;
