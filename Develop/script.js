@@ -1,17 +1,38 @@
 // Assignment Code Here
+//function charCount () {
+  //var isTheLengthValid = false;
+
+
+//Put a while or for loop here. While? While runs repeatedly.
+while(isTheLengthValid === false) {
+  //Now we should ask the user how many char they want the generator to generate for them
+  var passwordLength = window.prompt("Please Choose a Password Length Between 8 - 128 Characters.");
+
+  // If the password inputed is falsy, EXIT.
+  if(passwordLength === null){
+    return null;
+  }
+
+  // GAME TIME. If Password Length Is GOOD (within valid range) then keep going
+
+  // GAME TIME. If Password Length Is NOT GOOD (not within valid range) then let the user know and window.prompt again
+
+  // DO NOT FORGET TO ADD RETURNS!!!!!!
+
+}
+
 
 //var passwordLength????
 //CreatePassword?
 
 // Create Variables For Password Character Choices
-function createPassword(#, #){
-password = "";
-var special = "!@#$%^&*()_-=+`~[{}]|:;'<,>.?/";
-var number = "1234567890";
-var uppercase = "QWERTYUIOPASDFGHJKLZXCVBNM";
-var lowercase = "qwertyuiopasdfghjklzxcvbnm";
+//function createPassword(#, #){
+//password = "";
+//var special = "!@#$%^&*()_-=+`~[{}]|:;'<,>.?/";
+//var number = "1234567890";
+//var uppercase = "QWERTYUIOPASDFGHJKLZXCVBNM";
+//var lowercase = "qwertyuiopasdfghjklzxcvbnm";
 
-}
 
 
 
@@ -33,6 +54,7 @@ function generatePassword() {
     return null;
   }
 
+  //another IF statement - check null later?(dev note)
   var password = charType(passwordLength);
   if (password === null) {
     return null;
