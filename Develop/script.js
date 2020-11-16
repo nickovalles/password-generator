@@ -111,6 +111,8 @@ while(isCharTextType === false) {
   //window thing now
   var typeEntry = window.prompt(
     //selection? copy and paste from charTextType for vars
+    // w3 school \n char
+    "Please select a number from the follow selection: \n" +
     typeA + "\n" +
     typeB + "\n" +
     typeC + "\n" +
@@ -126,6 +128,7 @@ while(isCharTextType === false) {
     typeM + "\n" +
     typeN + "\n" +
     typeO + "\n" +
+  
   );
 
 // IF the user did not input a reponse, then EXIT (find null thing)(if or else if?)
@@ -134,6 +137,129 @@ if(typeEntry === null) {
   return null;
 }
 
+// Switch Preparation
+// Type Entry Selection (if)
+typeEntrySelection = parseInt(typeEntry);
+
+if(typeEntrySelection >= 1 && typeEntrySelection <= 15) {
+  isCharTextType = true;
+  // Type Entry Selection (if) falsy
+} else {
+  window.alert("Whoops! Invalid entry of " + typeEntrySelection +" .Please now choose a reponse between 1 - 15.");
+  // not break
+  continue;
+}
+
+// Using Switch - carrying out action cases
+switch(typeEntrySelection) {
+  case A: //uppercase
+  alert("You have selected " + typeA);
+  var textTypeChoices = [A]
+  password = createPassword(passwordLength, typeEntrySelection);
+  //break
+  break;
+
+  case B: //uppercase
+  alert("You have selected " + typeB);
+  var textTypeChoices = [B]
+  password = createPassword(passwordLength, typeEntrySelection);
+  //break
+  break;
+
+  case C: //uppercase
+  alert("You have selected " + typeC);
+  var textTypeChoices = [C]
+  password = createPassword(passwordLength, typeEntrySelection);
+  //break
+  break;
+
+  case D: //uppercase
+    alert("You have selected " + typeD);
+    var textTypeChoices = [D]
+    password = createPassword(passwordLength, typeEntrySelection);
+  //break
+    break;
+
+    case E: //uppercase
+    alert("You have selected " + typeE);
+    var textTypeChoices = [E]
+    password = createPassword(passwordLength, typeEntrySelection);
+  //break
+    break;
+
+    case F: //uppercase
+    alert("You have selected " + typeF);
+    var textTypeChoices = [F]
+    password = createPassword(passwordLength, typeEntrySelection);
+  //break
+    break;
+
+    case G: //uppercase
+    alert("You have selected " + typeG);
+    var textTypeChoices = [G]
+    password = createPassword(passwordLength, typeEntrySelection);
+  //break
+    break;
+
+    case H: //uppercase
+    alert("You have selected " + typeH);
+    var textTypeChoices = [H]
+    password = createPassword(passwordLength, typeEntrySelection);
+  //break
+    break;
+
+    case I: //uppercase
+    alert("You have selected " + typeI);
+    var textTypeChoices = [I]
+    password = createPassword(passwordLength, typeEntrySelection);
+  //break
+    break;
+
+    case J: //uppercase
+    alert("You have selected " + typeJ);
+    var textTypeChoices = [J]
+    password = createPassword(passwordLength, typeEntrySelection);
+  //break
+    break;
+
+    case K: //uppercase
+    alert("You have selected " + typeK);
+    var textTypeChoices = [K]
+    password = createPassword(passwordLength, typeEntrySelection);
+  //break
+    break;
+
+    case L: //uppercase
+    alert("You have selected " + typeL);
+    var textTypeChoices = [L]
+    password = createPassword(passwordLength, typeEntrySelection);
+  //break
+    break;
+
+    case M: //uppercase
+    alert("You have selected " + typeM);
+    var textTypeChoices = [M]
+    password = createPassword(passwordLength, typeEntrySelection);
+  //break
+    break;
+
+    case N: //uppercase
+    alert("You have selected " + typeN);
+    var textTypeChoices = [N]
+    password = createPassword(passwordLength, typeEntrySelection);
+  //break
+    break;
+
+    case O: //uppercase
+    alert("You have selected " + typeO);
+    var textTypeChoices = [O]
+    password = createPassword(passwordLength, typeEntrySelection);
+  //break
+    break;
+
+}
+
+}
 
 
 }
@@ -182,6 +308,4 @@ function writePassword() {
 
 
 // Add Event Listener to Generate Button
-//generateBtn.addEventListener("click", writePassword)
-
-}
+generateBtn.addEventListener("click", writePassword)
