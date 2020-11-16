@@ -35,27 +35,111 @@ while(isTheLengthValid === false) {
 
 }
 
-
-//var passwordLength????
-//CreatePassword?
-
+// SMALL REMINDER TO REMEMBER LOCAL VS GLOBAL
+// Dont panic if things grey out... 
 // Create Variables For Password Character Choices
-//function createPassword(#, #){
-//password = "";
-//var special = "!@#$%^&*()_-=+`~[{}]|:;'<,>.?/";
-//var number = "1234567890";
-//var uppercase = "QWERTYUIOPASDFGHJKLZXCVBNM";
-//var lowercase = "qwertyuiopasdfghjklzxcvbnm";
+function createPassword(passwordLength, textTypeChoices){
+password = "";
+var special = "!@#$%^&*()_-=+`~[{}]|:;'<,>.?/";
+var number = "1234567890";
+var uppercase = "QWERTYUIOPASDFGHJKLZXCVBNM";
+var lowercase = "qwertyuiopasdfghjklzxcvbnm";
 
+// Some type of loop here to go through the vars. For??
+for (var i = 0; i < passwordLength; i++) {
+  // Use Math Floor()
+  var itemCase = textTypeChoices[Math.floor(Math.random() * textTypeChoices.length)];
 
+  switch (itemCase) {
+    case A: // UPPER
+      password += uppercase[Math.floor(Math.random() *uppercase.length)];
+      // it doesn't work if you don't put a break here
+      break;
+    case B: // LOWER
+      password += lowercase[Math.floor(Math.random() *lowercase.length)];
+      // it doesn't work if you don't put a break here
+      break;
+    case C: // SPECIAL CHAR
+      password += special[Math.floor(Math.random() *special.length)];
+      // it doesn't work if you don't put a break here
+      break;
+    case D: // NUMBER
+      password += number[Math.floor(Math.random() *number.length)];
+      // it doesn't work if you don't put a break here
+      break;
+    default:
+      break;
+  }
+}
+
+// DON'T forget to return or else you won't get anything back
+
+return password;
+
+}
 
 
 
 // Generate Appropriate Password based on charType (check w3school for that link)
 
+function charTextType(passwordLength) {
+  // STRING VAR, just text
+  var typeA = "1: uppercase";
+  var typeB = "2: lowercase";
+  var typeC = "3: numbers";
+  var typeD = "4: special characters";
+  var typeE = "5: lowercase + uppercase";
+  var typeF = "6: lowercase + numbers";
+  var typeG = "7: lowercase + special character";
+  var typeH = "8: uppercase + numbers";
+  var typeI = "9: uppercase + special character";
+  var typeJ = "10: numbers + special character";
+  var typeK = "11: lowercase + uppercase + numbers";
+  var typeL = "12: lowercase + uppercase + special character";
+  var typeM= "13: lowercase + numbers + special character";
+  var typeN = "14: uppercase + numbers + special character";
+  var typeO = "15: lowercase + uppercase + numbers + special character";
 
+// Boolean, T or F?
+
+var isCharTextType = false;
 
 // Prompt User To Select One of the Following Options
+// Loops
+
+while(isCharTextType === false) {
+  //window thing now
+  var typeEntry = window.prompt(
+    //selection? copy and paste from charTextType for vars
+    typeA + "\n" +
+    typeB + "\n" +
+    typeC + "\n" +
+    typeD + "\n" +
+    typeE + "\n" +
+    typeF + "\n" +
+    typeG + "\n" +
+    typeH + "\n" +
+    typeI + "\n" +
+    typeJ + "\n" +
+    typeK + "\n" +
+    typeL + "\n" +
+    typeM + "\n" +
+    typeN + "\n" +
+    typeO + "\n" +
+  );
+
+// IF the user did not input a reponse, then EXIT (find null thing)(if or else if?)
+if(typeEntry === null) {
+  //debugged: you forgot the return
+  return null;
+}
+
+
+
+}
+
+}
+
 
 
 // Use Swtich to Carry out Action
@@ -69,7 +153,7 @@ function generatePassword() {
   }
 
   //another IF statement - check null later?(dev note)
-  var password = charType(passwordLength);
+  var password = charTextType(passwordLength);
   if (password === null) {
     return null;
   }
