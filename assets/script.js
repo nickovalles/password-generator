@@ -149,6 +149,7 @@ if(typeEntrySelection >= 1 && typeEntrySelection <= 15) {
 } 
 
 else {
+  // CAREFUL - putting the typeEntrySelection gives a NaN (not a number) response
   alert("Whoops! Invalid entry. Please now choose a reponse between 1 - 15.");
   // not break
   continue;
