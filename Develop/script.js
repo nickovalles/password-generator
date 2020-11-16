@@ -29,6 +29,7 @@ while(isTheLengthValid === false) {
     // BREAK TIME
     break;
   }
+}
 
   // DO NOT FORGET TO ADD RETURNS!!!!!!
   return passwordLength;
@@ -82,7 +83,7 @@ return password;
 
 // Generate Appropriate Password based on charType (check w3school for that link)
 
-function charTextType (passwordLength) {
+function charType (passwordLength) {
   // STRING VAR, just text
   var typeA = "1: uppercase";
   var typeB = "2: lowercase";
@@ -102,15 +103,15 @@ function charTextType (passwordLength) {
 
 // Boolean, T or F?
 
-var isCharTextType = false;
+var ischarType = false;
 
 // Prompt User To Select One of the Following Options
 // Loops
 
-while(isCharTextType === false) {
+while(ischarType === false) {
   //window thing now
   var typeEntry = window.prompt(
-    //selection? copy and paste from charTextType for vars
+    //selection? copy and paste from charType for vars
     // w3 school \n char
     "Please select a number from the follow selection: \n" +
     typeA + "\n" +
@@ -142,9 +143,11 @@ if(typeEntry === null) {
 typeEntrySelection = parseInt(typeEntry);
 
 if(typeEntrySelection >= 1 && typeEntrySelection <= 15) {
-  isCharTextType = true;
+  ischarType = true;
   // Type Entry Selection (if) falsy
-} else {
+} 
+
+else {
   window.alert("Whoops! Invalid entry of " + typeEntrySelection +" .Please now choose a reponse between 1 - 15.");
   // not break
   continue;
@@ -264,31 +267,24 @@ switch(typeEntrySelection) {
     continue;
 
 }
+}
 
 //returns
 return password;
 
 }
-
-
-}
-
-}
-
-
-
 // Use Swtich to Carry out Action
 
 
 // Generate Password Based on all Factors
 function generatePassword() {
-  var passwordLength = charCount();
+  var passwordLength = charCount(); 
   if (passwordLength === null) {
     return null;
   }
 
   //another IF statement - check null later?(dev note)
-  var password = charTextType(passwordLength);
+  var password = charType(passwordLength);
   if (password === null) {
     return null;
   }
@@ -309,7 +305,9 @@ function writePassword() {
     passwordText.value = "The User Cancelled During The Prompt.";
 
     // If not... copy the password into the text box.
-  } else {
+  } 
+  
+  else {
     passwordText.value = password;
   }
 
@@ -317,4 +315,4 @@ function writePassword() {
 
 
 // Add Event Listener to Generate Button
-generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", writePassword)
