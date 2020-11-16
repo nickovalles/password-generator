@@ -159,105 +159,105 @@ switch(typeEntrySelection) {
   case 1: //uppercase
   alert("You have selected " + type1);
   var textTypeChoices = [1]
-  password = createPassword(passwordLength, typeEntrySelection);
+  password = createPassword(passwordLength, textTypeChoices);
   //break
   break;
 
   case 2: //uppercase
   alert("You have selected " + type2);
   var textTypeChoices = [2]
-  password = createPassword(passwordLength, typeEntrySelection);
+  password = createPassword(passwordLength, textTypeChoices);
   //break
   break;
 
   case 3: //uppercase
   alert("You have selected " + type3);
   var textTypeChoices = [3]
-  password = createPassword(passwordLength, typeEntrySelection);
+  password = createPassword(passwordLength, textTypeChoices);
   //break
   break;
 
   case 4: //uppercase
     alert("You have selected " + type4);
     var textTypeChoices = [4]
-    password = createPassword(passwordLength, typeEntrySelection);
+    password = createPassword(passwordLength, textTypeChoices);
   //break
     break;
 
     case 5: //uppercase
     alert("You have selected " + type5);
     var textTypeChoices = [1, 2]
-    password = createPassword(passwordLength, typeEntrySelection);
+    password = createPassword(passwordLength, textTypeChoices);
   //break
     break;
 
     case 6: //uppercase
     alert("You have selected " + type6);
     var textTypeChoices = [1, 3]
-    password = createPassword(passwordLength, typeEntrySelection);
+    password = createPassword(passwordLength, textTypeChoices);
   //break
     break;
 
     case 7: //uppercase
     alert("You have selected " + type7);
     var textTypeChoices = [1, 4]
-    password = createPassword(passwordLength, typeEntrySelection);
+    password = createPassword(passwordLength, textTypeChoices);
   //break
     break;
 
     case 8: //uppercase
     alert("You have selected " + type8);
     var textTypeChoices = [2, 3]
-    password = createPassword(passwordLength, typeEntrySelection);
+    password = createPassword(passwordLength, textTypeChoices);
   //break
     break;
 
     case 9: //uppercase
     alert("You have selected " + type9);
     var textTypeChoices = [2, 4]
-    password = createPassword(passwordLength, typeEntrySelection);
+    password = createPassword(passwordLength, textTypeChoices);
   //break
     break;
 
     case 10: //uppercase
     alert("You have selected " + type10);
     var textTypeChoices = [3, 4]
-    password = createPassword(passwordLength, typeEntrySelection);
+    password = createPassword(passwordLength, textTypeChoices);
   //break
     break;
 
     case 11: //uppercase
     alert("You have selected " + type11);
     var textTypeChoices = [1, 2, 3]
-    password = createPassword(passwordLength, typeEntrySelection);
+    password = createPassword(passwordLength, textTypeChoices);
   //break
     break;
 
     case 12: //uppercase
     alert("You have selected " + type12);
     var textTypeChoices = [1, 2, 4]
-    password = createPassword(passwordLength, typeEntrySelection);
+    password = createPassword(passwordLength, textTypeChoices);
   //break
     break;
 
     case 13: //uppercase
     alert("You have selected " + type13);
     var textTypeChoices = [1, 3, 4]
-    password = createPassword(passwordLength, typeEntrySelection);
+    password = createPassword(passwordLength, textTypeChoices);
   //break
     break;
 
     case 14: //uppercase
     alert("You have selected " + type14);
     var textTypeChoices = [2, 3, 4]
-    password = createPassword(passwordLength, typeEntrySelection);
+    password = createPassword(passwordLength, textTypeChoices);
   //break
     break;
 
     case 15: //uppercase
     alert("You have selected " + type15);
     var textTypeChoices = [1, 2, 3, 4]
-    password = createPassword(passwordLength, typeEntrySelection);
+    password = createPassword(passwordLength, textTypeChoices);
   //break
     break;
 
@@ -310,6 +310,7 @@ function writePassword() {
   
   else {
     passwordText.value = password;
+
   }
 
 }
