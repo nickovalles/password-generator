@@ -14,7 +14,7 @@ The site has a codebase that follows accessibility standards so that it is optim
 
 ## Images
 
-![Screenshot of Website](Develop\screenshot.png) ("Website Screenshot")
+![Screenshot of Website](assets\style\screenshot.png) ("Website Screenshot")
 
 ## Links
 
