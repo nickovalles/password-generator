@@ -82,7 +82,7 @@ return password;
 
 // Generate Appropriate Password based on charType (check w3school for that link)
 
-function charTextType(passwordLength) {
+function charTextType (passwordLength) {
   // STRING VAR, just text
   var typeA = "1: uppercase";
   var typeB = "2: lowercase";
@@ -127,7 +127,7 @@ while(isCharTextType === false) {
     typeL + "\n" +
     typeM + "\n" +
     typeN + "\n" +
-    typeO + "\n" +
+    typeO + "\n" 
   
   );
 
@@ -257,7 +257,16 @@ switch(typeEntrySelection) {
   //break
     break;
 
+  //add the default window one
+  default:
+    window.alert("Sorry! Invalid entry of " + typeEntrySelection +" .Please choose an entry between A - O");
+    //continue
+    continue;
+
 }
+
+//returns
+return password;
 
 }
 
@@ -308,4 +317,4 @@ function writePassword() {
 
 
 // Add Event Listener to Generate Button
-generateBtn.addEventListener("click", writePassword)
+generateBtn.addEventListener("click", writePassword);
