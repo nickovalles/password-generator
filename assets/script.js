@@ -149,7 +149,7 @@ if(typeEntrySelection >= 1 && typeEntrySelection <= 15) {
 } 
 
 else {
-  window.alert(`Whoops! Invalid entry of ${typeEntrySelection} .Please now choose a reponse between 1 - 15.`);
+  alert("Whoops! Invalid entry. Please now choose a reponse between 1 - 15.");
   // not break
   continue;
 }
@@ -263,7 +263,7 @@ switch(typeEntrySelection) {
 
   //add the default window one
   default:
-    window.alert("Sorry! Invalid entry of " + typeEntrySelection +" .Please choose an entry between A - O");
+    window.alert("Sorry! Invalid entry of " + typeEntrySelection +" .Please choose an entry between 1 - 15");
     //continue
     continue;
 
