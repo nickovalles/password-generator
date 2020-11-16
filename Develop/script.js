@@ -1,11 +1,11 @@
 // Assignment Code Here
-//function charCount () {
-  //var isTheLengthValid = false;
+function charCount () {
+  var isTheLengthValid = false;
 
 
-//Put a while or for loop here. While? While runs repeatedly.
+// Put a while or for loop here. While? While runs repeatedly.
 while(isTheLengthValid === false) {
-  //Now we should ask the user how many char they want the generator to generate for them
+  // Now we should ask the user how many char they want the generator to generate for them. 8-128, refer to Acceptance Reqs in Bootcamp spot
   var passwordLength = window.prompt("Please Choose a Password Length Between 8 - 128 Characters.");
 
   // If the password inputed is falsy, EXIT.
@@ -13,11 +13,25 @@ while(isTheLengthValid === false) {
     return null;
   }
 
-  // GAME TIME. If Password Length Is GOOD (within valid range) then keep going
+  // GAME TIME. If Password Length Is GOOD (within valid range) then keep going .. maybe parseInt?
+  passwordLength = parseInt(passwordLength)
+  if (passwordLength >= 8 && passwordLength <= 128 ) {
+    window.alert("The Length of your desired password is accepted as "+ passwordLength +" characters.");
+    isTheLengthValid = true;
+    // BREAK TIME
+    break;
+  }
 
   // GAME TIME. If Password Length Is NOT GOOD (not within valid range) then let the user know and window.prompt again
+  if (passwordLength <= 8 || passwordLength >= 128) {
+    window.alert("Sorry! Invalid. Please Select a Length Between 8 - 128 characters. Thank you!");
+    isTheLengthValid = false;
+    // BREAK TIME
+    break;
+  }
 
   // DO NOT FORGET TO ADD RETURNS!!!!!!
+  return passwordLength;
 
 }
 
@@ -84,4 +98,6 @@ function writePassword() {
 
 
 // Add Event Listener to Generate Button
-generateBtn.addEventListener("click", writePassword);
+//generateBtn.addEventListener("click", writePassword)
+
+}
