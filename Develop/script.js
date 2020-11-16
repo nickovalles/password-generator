@@ -23,11 +23,12 @@ while(isTheLengthValid === false) {
   }
 
   // GAME TIME. If Password Length Is NOT GOOD (not within valid range) then let the user know and window.prompt again
-  if (passwordLength <= 8 || passwordLength >= 128) {
-    window.alert("Sorry! Invalid. Please Select a Length Between 8 - 128 characters. Thank you!");
+  else if (passwordLength <= 8 || passwordLength >= 128) {
+    alert("Sorry! Invalid. Please Select a Length Between 8 - 128 characters. Thank you!");
     isTheLengthValid = false;
+    continue;
     // BREAK TIME
-    break;
+    //break;
   }
 }
 
@@ -52,19 +53,19 @@ for (var i = 0; i < passwordLength; i++) {
   var itemCase = textTypeChoices[Math.floor(Math.random() * textTypeChoices.length)];
 
   switch (itemCase) {
-    case A: // UPPER
+    case 1: // UPPER
       password += uppercase[Math.floor(Math.random() *uppercase.length)];
       // it doesn't work if you don't put a break here
       break;
-    case B: // LOWER
+    case 2: // LOWER
       password += lowercase[Math.floor(Math.random() *lowercase.length)];
       // it doesn't work if you don't put a break here
       break;
-    case C: // SPECIAL CHAR
+    case 3: // SPECIAL CHAR
       password += special[Math.floor(Math.random() *special.length)];
       // it doesn't work if you don't put a break here
       break;
-    case D: // NUMBER
+    case 4: // NUMBER
       password += number[Math.floor(Math.random() *number.length)];
       // it doesn't work if you don't put a break here
       break;
@@ -85,21 +86,21 @@ return password;
 
 function charType (passwordLength) {
   // STRING VAR, just text
-  var typeA = "1: uppercase";
-  var typeB = "2: lowercase";
-  var typeC = "3: numbers";
-  var typeD = "4: special characters";
-  var typeE = "5: lowercase + uppercase";
-  var typeF = "6: lowercase + numbers";
-  var typeG = "7: lowercase + special character";
-  var typeH = "8: uppercase + numbers";
-  var typeI = "9: uppercase + special character";
-  var typeJ = "10: numbers + special character";
-  var typeK = "11: lowercase + uppercase + numbers";
-  var typeL = "12: lowercase + uppercase + special character";
-  var typeM= "13: lowercase + numbers + special character";
-  var typeN = "14: uppercase + numbers + special character";
-  var typeO = "15: lowercase + uppercase + numbers + special character";
+  var type1 = "1: uppercase";
+  var type2 = "2: lowercase";
+  var type3 = "3: numbers";
+  var type4 = "4: special characters";
+  var type5 = "5: lowercase + uppercase";
+  var type6 = "6: lowercase + numbers";
+  var type7 = "7: lowercase + special character";
+  var type8 = "8: uppercase + numbers";
+  var type9 = "9: uppercase + special character";
+  var type10 = "10: numbers + special character";
+  var type11 = "11: lowercase + uppercase + numbers";
+  var type12 = "12: lowercase + uppercase + special character";
+  var type13 = "13: lowercase + numbers + special character";
+  var type14 = "14: uppercase + numbers + special character";
+  var type15 = "15: lowercase + uppercase + numbers + special character";
 
 // Boolean, T or F?
 
@@ -114,21 +115,21 @@ while(ischarType === false) {
     //selection? copy and paste from charType for vars
     // w3 school \n char
     "Please select a number from the follow selection: \n" +
-    typeA + "\n" +
-    typeB + "\n" +
-    typeC + "\n" +
-    typeD + "\n" +
-    typeE + "\n" +
-    typeF + "\n" +
-    typeG + "\n" +
-    typeH + "\n" +
-    typeI + "\n" +
-    typeJ + "\n" +
-    typeK + "\n" +
-    typeL + "\n" +
-    typeM + "\n" +
-    typeN + "\n" +
-    typeO + "\n" 
+    type1 + "\n" +
+    type2 + "\n" +
+    type3 + "\n" +
+    type4 + "\n" +
+    type5 + "\n" +
+    type6 + "\n" +
+    type7 + "\n" +
+    type8 + "\n" +
+    type9 + "\n" +
+    type10 + "\n" +
+    type11 + "\n" +
+    type12 + "\n" +
+    type13 + "\n" +
+    type14 + "\n" +
+    type15 + "\n" 
   
   );
 
@@ -148,7 +149,7 @@ if(typeEntrySelection >= 1 && typeEntrySelection <= 15) {
 } 
 
 else {
-  window.alert("Whoops! Invalid entry of " + typeEntrySelection +" .Please now choose a reponse between 1 - 15.");
+  window.alert(`Whoops! Invalid entry of ${typeEntrySelection} .Please now choose a reponse between 1 - 15.`);
   // not break
   continue;
 }
@@ -156,106 +157,106 @@ else {
 // Using Switch - carrying out action cases
 switch(typeEntrySelection) {
   case 1: //uppercase
-  alert("You have selected " + typeA);
-  var textTypeChoices = [A]
+  alert("You have selected " + type1);
+  var textTypeChoices = [1]
   password = createPassword(passwordLength, typeEntrySelection);
   //break
   break;
 
   case 2: //uppercase
-  alert("You have selected " + typeB);
-  var textTypeChoices = [B]
+  alert("You have selected " + type2);
+  var textTypeChoices = [2]
   password = createPassword(passwordLength, typeEntrySelection);
   //break
   break;
 
   case 3: //uppercase
-  alert("You have selected " + typeC);
-  var textTypeChoices = [C]
+  alert("You have selected " + type3);
+  var textTypeChoices = [3]
   password = createPassword(passwordLength, typeEntrySelection);
   //break
   break;
 
   case 4: //uppercase
-    alert("You have selected " + typeD);
-    var textTypeChoices = [D]
+    alert("You have selected " + type4);
+    var textTypeChoices = [4]
     password = createPassword(passwordLength, typeEntrySelection);
   //break
     break;
 
     case 5: //uppercase
-    alert("You have selected " + typeE);
-    var textTypeChoices = [A, B]
+    alert("You have selected " + type5);
+    var textTypeChoices = [1, 2]
     password = createPassword(passwordLength, typeEntrySelection);
   //break
     break;
 
     case 6: //uppercase
-    alert("You have selected " + typeF);
-    var textTypeChoices = [A, C]
+    alert("You have selected " + type6);
+    var textTypeChoices = [1, 3]
     password = createPassword(passwordLength, typeEntrySelection);
   //break
     break;
 
     case 7: //uppercase
-    alert("You have selected " + typeG);
-    var textTypeChoices = [A, D]
+    alert("You have selected " + type7);
+    var textTypeChoices = [1, 4]
     password = createPassword(passwordLength, typeEntrySelection);
   //break
     break;
 
     case 8: //uppercase
-    alert("You have selected " + typeH);
-    var textTypeChoices = [B, C]
+    alert("You have selected " + type8);
+    var textTypeChoices = [2, 3]
     password = createPassword(passwordLength, typeEntrySelection);
   //break
     break;
 
     case 9: //uppercase
-    alert("You have selected " + typeI);
-    var textTypeChoices = [B, D]
+    alert("You have selected " + type9);
+    var textTypeChoices = [2, 4]
     password = createPassword(passwordLength, typeEntrySelection);
   //break
     break;
 
     case 10: //uppercase
-    alert("You have selected " + typeJ);
-    var textTypeChoices = [C, D]
+    alert("You have selected " + type10);
+    var textTypeChoices = [3, 4]
     password = createPassword(passwordLength, typeEntrySelection);
   //break
     break;
 
     case 11: //uppercase
-    alert("You have selected " + typeK);
-    var textTypeChoices = [A, B, C]
+    alert("You have selected " + type11);
+    var textTypeChoices = [1, 2, 3]
     password = createPassword(passwordLength, typeEntrySelection);
   //break
     break;
 
     case 12: //uppercase
-    alert("You have selected " + typeL);
-    var textTypeChoices = [A, B, D]
+    alert("You have selected " + type12);
+    var textTypeChoices = [1, 2, 4]
     password = createPassword(passwordLength, typeEntrySelection);
   //break
     break;
 
     case 13: //uppercase
-    alert("You have selected " + typeM);
-    var textTypeChoices = [A, C, D]
+    alert("You have selected " + type13);
+    var textTypeChoices = [1, 3, 4]
     password = createPassword(passwordLength, typeEntrySelection);
   //break
     break;
 
     case 14: //uppercase
-    alert("You have selected " + typeN);
-    var textTypeChoices = [B, C, D]
+    alert("You have selected " + type14);
+    var textTypeChoices = [2, 3, 4]
     password = createPassword(passwordLength, typeEntrySelection);
   //break
     break;
 
     case 15: //uppercase
-    alert("You have selected " + typeO);
-    var textTypeChoices = [A, B, C, D]
+    alert("You have selected " + type15);
+    var textTypeChoices = [1, 2, 3, 4]
     password = createPassword(passwordLength, typeEntrySelection);
   //break
     break;
@@ -315,4 +316,4 @@ function writePassword() {
 
 
 // Add Event Listener to Generate Button
-generateBtn.addEventListener("click", writePassword)
+generateBtn.addEventListener("click", writePassword);
